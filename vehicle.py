@@ -26,7 +26,7 @@ class Car:
                 break
             self.data.append(self.x)
            # print(self.number , x)
-        print(self.number, self.data)
+        # print(self.number, self.data)
         return (self.data)
 
     def get_number(self):
@@ -53,10 +53,13 @@ number_of_car = 10
 for i in range(number_of_car):
     i = Car()
     count = random.randint(-10, 10)
-    if( int(i.get_number()) >= number_of_car*(3/4) ):
-        count=abs(count)
-    elif ( int(i.get_number()) >= 0.5*number_of_car ):
-            count = -0.1* count
+
+    if( int(i.get_number()) >= number_of_car*(4/5) ):
+        count = -0.2* count
+    elif( int(i.get_number()) >= number_of_car*(3/4) ):
+        count = abs(count)
+    elif( int(i.get_number()) >= number_of_car*(1/4) ):
+        count = -0.1 * count
     i.run(count)
     i.plot()
 
